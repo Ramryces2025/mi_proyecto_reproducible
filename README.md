@@ -17,10 +17,16 @@ entrena el modelo y guarda el artefacto en la carpeta `models/`.
 2) Instalar dependencias:
    pip install -r requirements.txt
 
+O usando Makefile:
+   make install
+
 ## Ejecucion
 Desde la carpeta del proyecto:
 
 python src/train.py
+
+O usando Makefile:
+   make train
 
 Opciones:
 - --data: ruta al CSV (default: data/raw/data_export.csv)
@@ -30,6 +36,18 @@ Opciones:
 
 Ejemplo:
 python src/train.py --data data/raw/data_export.csv --model-out models/modelo.pkl --test-size 0.25 --seed 123
+
+## Comandos utiles (Makefile)
+- make install: instala dependencias
+- make data: valida que el dataset exista
+- make train: entrena el modelo con rutas por defecto
+- make clean: elimina modelos en `models/*.pkl`
+- make help: muestra ayuda
+
+## Flujo rapido
+make install
+make data
+make train
 
 ## Estructura del proyecto
 mi_proyecto_reproducible/
