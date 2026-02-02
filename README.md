@@ -8,6 +8,19 @@ entrena el modelo y guarda el artefacto en la carpeta `models/`.
 ## Requisitos
 - Python 3.10+ recomendado
 
+## Instalacion de Python (Windows)
+1) Descargar e instalar desde el sitio oficial de Python.
+2) En el instalador, marcar la opcion "Add Python to PATH".
+3) Verificar instalacion:
+   python --version
+
+## Instalacion de Chocolatey (PowerShell)
+En PowerShell (como Administrador), si la politica de ejecucion lo bloquea:
+   Set-ExecutionPolicy Bypass -Scope Process -Force
+
+Luego instalar Chocolatey:
+   [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
 ## Instalacion
 1) Crear entorno virtual (opcional pero recomendado):
    - Windows PowerShell:
